@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.raceTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -37,6 +37,14 @@
             this.vadalisRB = new System.Windows.Forms.RadioButton();
             this.humanLB = new System.Windows.Forms.LinkLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dexmodLB = new System.Windows.Forms.Label();
+            this.conmodLB = new System.Windows.Forms.Label();
+            this.intmodLB = new System.Windows.Forms.Label();
+            this.wismodLB = new System.Windows.Forms.Label();
+            this.chamodLB = new System.Windows.Forms.Label();
+            this.strmodLB = new System.Windows.Forms.Label();
+            this.modLB = new System.Windows.Forms.Label();
+            this.pointLB = new System.Windows.Forms.Label();
             this.chaFINAL = new System.Windows.Forms.Label();
             this.wisFINAL = new System.Windows.Forms.Label();
             this.intFINAL = new System.Windows.Forms.Label();
@@ -65,15 +73,7 @@
             this.conLB = new System.Windows.Forms.Label();
             this.dexLB = new System.Windows.Forms.Label();
             this.strLB = new System.Windows.Forms.Label();
-            this.pointLB = new System.Windows.Forms.Label();
-            this.modLB = new System.Windows.Forms.Label();
-            this.strmodLB = new System.Windows.Forms.Label();
-            this.chamodLB = new System.Windows.Forms.Label();
-            this.wismodLB = new System.Windows.Forms.Label();
-            this.intmodLB = new System.Windows.Forms.Label();
-            this.conmodLB = new System.Windows.Forms.Label();
-            this.dexmodLB = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.raceTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intNUM)).BeginInit();
@@ -84,15 +84,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.strNUM)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // raceTab
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1185, 528);
-            this.tabControl1.TabIndex = 0;
+            this.raceTab.Controls.Add(this.tabPage1);
+            this.raceTab.Controls.Add(this.tabPage2);
+            this.raceTab.Location = new System.Drawing.Point(1, 3);
+            this.raceTab.Name = "raceTab";
+            this.raceTab.SelectedIndex = 0;
+            this.raceTab.Size = new System.Drawing.Size(1185, 528);
+            this.raceTab.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -107,7 +107,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1177, 499);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Race";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // radioButton5
@@ -220,8 +220,79 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1177, 499);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Stats";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dexmodLB
+            // 
+            this.dexmodLB.AutoSize = true;
+            this.dexmodLB.Location = new System.Drawing.Point(267, 420);
+            this.dexmodLB.Name = "dexmodLB";
+            this.dexmodLB.Size = new System.Drawing.Size(46, 17);
+            this.dexmodLB.TabIndex = 41;
+            this.dexmodLB.Text = "label1";
+            // 
+            // conmodLB
+            // 
+            this.conmodLB.AutoSize = true;
+            this.conmodLB.Location = new System.Drawing.Point(407, 420);
+            this.conmodLB.Name = "conmodLB";
+            this.conmodLB.Size = new System.Drawing.Size(46, 17);
+            this.conmodLB.TabIndex = 40;
+            this.conmodLB.Text = "label1";
+            // 
+            // intmodLB
+            // 
+            this.intmodLB.AutoSize = true;
+            this.intmodLB.Location = new System.Drawing.Point(541, 420);
+            this.intmodLB.Name = "intmodLB";
+            this.intmodLB.Size = new System.Drawing.Size(46, 17);
+            this.intmodLB.TabIndex = 39;
+            this.intmodLB.Text = "label1";
+            // 
+            // wismodLB
+            // 
+            this.wismodLB.AutoSize = true;
+            this.wismodLB.Location = new System.Drawing.Point(683, 420);
+            this.wismodLB.Name = "wismodLB";
+            this.wismodLB.Size = new System.Drawing.Size(46, 17);
+            this.wismodLB.TabIndex = 38;
+            this.wismodLB.Text = "label1";
+            // 
+            // chamodLB
+            // 
+            this.chamodLB.AutoSize = true;
+            this.chamodLB.Location = new System.Drawing.Point(818, 420);
+            this.chamodLB.Name = "chamodLB";
+            this.chamodLB.Size = new System.Drawing.Size(46, 17);
+            this.chamodLB.TabIndex = 37;
+            this.chamodLB.Text = "label1";
+            // 
+            // strmodLB
+            // 
+            this.strmodLB.AutoSize = true;
+            this.strmodLB.Location = new System.Drawing.Point(133, 420);
+            this.strmodLB.Name = "strmodLB";
+            this.strmodLB.Size = new System.Drawing.Size(46, 17);
+            this.strmodLB.TabIndex = 36;
+            this.strmodLB.Text = "label1";
+            // 
+            // modLB
+            // 
+            this.modLB.AutoSize = true;
+            this.modLB.Location = new System.Drawing.Point(463, 371);
+            this.modLB.Name = "modLB";
+            this.modLB.Size = new System.Drawing.Size(65, 17);
+            this.modLB.TabIndex = 35;
+            this.modLB.Text = "Modifiers";
+            // 
+            // pointLB
+            // 
+            this.pointLB.AutoSize = true;
+            this.pointLB.Location = new System.Drawing.Point(509, 124);
+            this.pointLB.Name = "pointLB";
+            this.pointLB.Size = new System.Drawing.Size(0, 17);
+            this.pointLB.TabIndex = 34;
             // 
             // chaFINAL
             // 
@@ -495,6 +566,7 @@
             this.arrBUT.TabIndex = 12;
             this.arrBUT.Text = "Standard Array";
             this.arrBUT.UseVisualStyleBackColor = true;
+            this.arrBUT.Click += new System.EventHandler(this.arrBUT_Click);
             // 
             // chaLB
             // 
@@ -550,86 +622,15 @@
             this.strLB.TabIndex = 6;
             this.strLB.Text = "Strength";
             // 
-            // pointLB
-            // 
-            this.pointLB.AutoSize = true;
-            this.pointLB.Location = new System.Drawing.Point(509, 124);
-            this.pointLB.Name = "pointLB";
-            this.pointLB.Size = new System.Drawing.Size(0, 17);
-            this.pointLB.TabIndex = 34;
-            // 
-            // modLB
-            // 
-            this.modLB.AutoSize = true;
-            this.modLB.Location = new System.Drawing.Point(463, 371);
-            this.modLB.Name = "modLB";
-            this.modLB.Size = new System.Drawing.Size(65, 17);
-            this.modLB.TabIndex = 35;
-            this.modLB.Text = "Modifiers";
-            // 
-            // strmodLB
-            // 
-            this.strmodLB.AutoSize = true;
-            this.strmodLB.Location = new System.Drawing.Point(133, 420);
-            this.strmodLB.Name = "strmodLB";
-            this.strmodLB.Size = new System.Drawing.Size(46, 17);
-            this.strmodLB.TabIndex = 36;
-            this.strmodLB.Text = "label1";
-            // 
-            // chamodLB
-            // 
-            this.chamodLB.AutoSize = true;
-            this.chamodLB.Location = new System.Drawing.Point(818, 420);
-            this.chamodLB.Name = "chamodLB";
-            this.chamodLB.Size = new System.Drawing.Size(46, 17);
-            this.chamodLB.TabIndex = 37;
-            this.chamodLB.Text = "label1";
-            // 
-            // wismodLB
-            // 
-            this.wismodLB.AutoSize = true;
-            this.wismodLB.Location = new System.Drawing.Point(683, 420);
-            this.wismodLB.Name = "wismodLB";
-            this.wismodLB.Size = new System.Drawing.Size(46, 17);
-            this.wismodLB.TabIndex = 38;
-            this.wismodLB.Text = "label1";
-            // 
-            // intmodLB
-            // 
-            this.intmodLB.AutoSize = true;
-            this.intmodLB.Location = new System.Drawing.Point(541, 420);
-            this.intmodLB.Name = "intmodLB";
-            this.intmodLB.Size = new System.Drawing.Size(46, 17);
-            this.intmodLB.TabIndex = 39;
-            this.intmodLB.Text = "label1";
-            // 
-            // conmodLB
-            // 
-            this.conmodLB.AutoSize = true;
-            this.conmodLB.Location = new System.Drawing.Point(407, 420);
-            this.conmodLB.Name = "conmodLB";
-            this.conmodLB.Size = new System.Drawing.Size(46, 17);
-            this.conmodLB.TabIndex = 40;
-            this.conmodLB.Text = "label1";
-            // 
-            // dexmodLB
-            // 
-            this.dexmodLB.AutoSize = true;
-            this.dexmodLB.Location = new System.Drawing.Point(267, 420);
-            this.dexmodLB.Name = "dexmodLB";
-            this.dexmodLB.Size = new System.Drawing.Size(46, 17);
-            this.dexmodLB.TabIndex = 41;
-            this.dexmodLB.Text = "label1";
-            // 
             // NewChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 532);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.raceTab);
             this.Name = "NewChar";
             this.Text = "NewChar";
-            this.tabControl1.ResumeLayout(false);
+            this.raceTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -646,7 +647,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl raceTab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RadioButton radioButton5;

@@ -25,6 +25,8 @@ namespace DnD
         public NewChar()
         {
             InitializeComponent();
+            raceTab.Text = "Race";
+
             editFields[0] = strNUM;
             editFields[1] = dexNUM;
             editFields[2] = conNUM;
@@ -127,6 +129,7 @@ namespace DnD
             foreach (NumericUpDown box in editFields)
             {
                 box.Enabled = true;
+                box.ReadOnly = true;
                 box.Value = 8;
                 for (int i = 0; i < realStats.Length; i++)
                 {
@@ -152,9 +155,19 @@ namespace DnD
 
                 if (editFields[i].Value > realStats[i])
                 {
-                    pointsRemaining--;
+                    if (!(pointsRemaining - 1 < 0))
+                    {
+                        pointsRemaining--;
+                    }
+                    else
+                    {
+                        if (editFields[i].Value + 1 < editFields[i].Maximum)
+                        {
+                            editFields[i].Value = editFields[i].Value - 1;
+                        }
+                    }
                 }
-                else
+                if(editFields[i].Value < realStats[i])
                 {
                     pointsRemaining++;
                 }
@@ -191,23 +204,60 @@ namespace DnD
 
         private void rollBUT_Click(object sender, EventArgs e)
         {
+            pointsRemaining = 0;
             DiceRoller roll = new DiceRoller(6, 6);
-            List<int> numbers = roll.roll();
+            List<int> numbers;
             pointBuy = true;
             for (int i = 0; i < 6; i++)
             {
-                while (numbers.Capacity > 3)
+                numbers = roll.roll();
+                while (numbers.Count > 3)
                 {
+
                     int index = numbers.Min();
                     numbers.Remove(index);
                 }
-                foreach(int number in numbers)
+                foreach (int number in numbers)
                 {
                     pointsRemaining += number;
                 }
                 numbers.Clear();
             }
+            foreach (NumericUpDown box in editFields)
+            {
+                box.Enabled = true;
+                box.ReadOnly = true;
+                box.Value = 1;
+                for (int i = 0; i < realStats.Length; i++)
+                {
+                    realStats[i] = 1;
+                }
+            }
             pointLB.Text = "Points Remaining: " + pointsRemaining;
+        }
+
+        private void arrBUT_Click(object sender, EventArgs e)
+        {
+            pointsRemaining = 0;
+            pointLB.Text = "Points Remaining: " + pointsRemaining;
+            editFields[0].Value = 15;
+            editFields[1].Value = 14;
+            editFields[2].Value = 13;
+            editFields[3].Value = 12;
+            editFields[4].Value = 10;
+            editFields[5].Value = 8;
+            for(int i = 0; i < realStats.Length; i++)
+            {
+                realStats[i] = (int)editFields[i].Value;
+            }
+            foreach(NumericUpDown box in editFields)
+            {
+                box.Enabled = true;
+                box.ReadOnly = true;
+            }
+
+            pointBuy = true;
+
         }
     }
 }
