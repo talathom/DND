@@ -1,0 +1,10 @@
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\bin\Debug\DnD.exe.config
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\bin\Debug\DnD.exe
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\bin\Debug\DnD.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.Menu.resources
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.NewChar.resources
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.Properties.Resources.resources
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.exe
+c:\users\thomas\documents\visual studio 2015\Projects\DnD\DnD\obj\Debug\DnD.pdb
